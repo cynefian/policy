@@ -12,7 +12,7 @@ By installing and using the Extension, you agree to the terms outlined in this P
 
 The Extension integrates **WhatsApp Web** with the **EnergyNow business management platform**. It allows authorized business users to:
 
-* Send WhatsApp messages for transaction alerts, inventory updates, and approvals.
+* Send individual/bulk WhatsApp messages for transaction alerts, inventory updates, approvals, and other custom business-related messages.
 * Manage message queues for bulk or campaign-based communication.
 * Receive real-time notifications related to business operations.
 
@@ -95,9 +95,9 @@ All data transfers are encrypted using **HTTPS**.
 
 ---
 
-## 7. Permissions Justification
+## 7. Browser Permissions 
 
-The Extension requests the following Chrome permissions strictly for core functionality:
+The Extension requests the following browser permissions strictly for core functionality:
 
 * **activeTab / tabs** – to detect WhatsApp Web and manage messaging tabs.
 * **storage** – to securely store tokens, message queues, and settings.
@@ -127,7 +127,6 @@ As a user, you have the right to:
 
 * Access the data you provide through the Extension.
 * Request deletion of data by logging out or uninstalling.
-* Refuse to provide optional information (e.g., country code detection).
 
 ---
 
@@ -146,7 +145,7 @@ We certify that data is used solely for providing the stated business functional
 
 If you have questions or concerns about this Privacy Policy, please contact:
 
-**Support Email:** [support@energynow.in](mailto:support@energynow.in)
+**Support Email:** [support@cynefian.com](mailto:support@cynefian.com)
 **Website:** [https://energynow.in](https://energynow.in)
 
 ---
