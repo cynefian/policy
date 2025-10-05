@@ -1,8 +1,4 @@
-# Chrome Web Store Privacy Questionnaire - Quick Answers
-
-This document provides concise answers for the Chrome Web Store submission form. For detailed explanations, see PRIVACY.md.
-
----
+# Chrome Web Store Privacy Policy
 
 ## Single Purpose Description
 
@@ -12,7 +8,7 @@ WhatsApp integration for energy business operations, enabling authorized users t
 **Detailed description (for store listing):**
 EnergyNow Bridge integrates WhatsApp Web with the EnergyNow business management platform. It enables authorized business users to send WhatsApp messages for energy transaction alerts, inventory management, overhead tracking, and operational approvals. The extension provides a message queue system for bulk messaging campaigns and real-time notifications for business events.
 
----
+
 
 ## Permission Justifications
 
@@ -46,7 +42,7 @@ User authentication, OAuth callbacks, and session management.
 ### Host: ipapi.co
 One-time country detection to auto-select country code for phone number formatting (UX improvement only).
 
----
+
 
 ## Remote Code
 
@@ -54,7 +50,7 @@ One-time country detection to auto-select country code for phone number formatti
 
 **Justification:** All code is bundled with the extension package. Only JSON data is fetched from APIs, never executable JavaScript. Content Security Policy prevents remote code execution.
 
----
+
 
 ## Data Usage Certification
 
@@ -70,19 +66,18 @@ One-time country detection to auto-select country code for phone number formatti
 **Transmission:** HTTPS only
 **Storage:** Chrome storage API (encrypted)
 
----
+
 
 ### Health Information
 **Collected:** NO
 
----
 
 ### Financial and Payment Information
 **Collected:** NO
 
 **Note:** Extension displays read-only transaction records for approval workflows but does NOT collect payment details, process transactions, or handle financial data.
 
----
+
 
 ### Authentication Information
 **Collected:** YES
@@ -93,7 +88,7 @@ One-time country detection to auto-select country code for phone number formatti
 **Security:** Stored encrypted in Chrome storage, transmitted via HTTPS only, auto-expire
 **Shared with:** EnergyNow API only
 
----
+
 
 ### Personal Communications
 **Collected:** YES
@@ -111,21 +106,20 @@ One-time country detection to auto-select country code for phone number formatti
 **Transmission:** Through WhatsApp's infrastructure (subject to WhatsApp's privacy policy)
 **Retention:** Stored locally until delivery, then optionally cleared
 
----
+
 
 ### Location
 **Collected:** NO
 
 **Note:** Uses ipapi.co once to detect country code (e.g., "IN") for phone formatting UX. Does NOT track GPS, precise location, or IP addresses.
 
----
 
 ### Web History
 **Collected:** NO
 
 Extension only detects if web.whatsapp.com is open. Does not monitor, track, or access other websites, URLs, bookmarks, or browsing history.
 
----
+
 
 ### User Activity
 **Collected:** YES (local only)
@@ -138,7 +132,7 @@ Extension only detects if web.whatsapp.com is open. Does not monitor, track, or 
 **Analytics:** NO analytics services used
 **Sharing:** NOT transmitted to any server
 
----
+
 
 ### Website Content
 **Accessed:** YES
@@ -153,7 +147,6 @@ Extension only detects if web.whatsapp.com is open. Does not monitor, track, or 
 
 **Modifications:** Scripts injected into web.whatsapp.com only for messaging functionality
 
----
 
 ## Data Handling Practices Summary
 
@@ -168,7 +161,7 @@ Extension only detects if web.whatsapp.com is open. Does not monitor, track, or 
 | Location | No | - | - | - | - |
 | Web history | No | - | - | - | - |
 
----
+
 
 ## Certification Statements
 
@@ -181,7 +174,7 @@ Extension only detects if web.whatsapp.com is open. Does not monitor, track, or 
 ✅ Users can delete data via logout/uninstall
 ✅ Privacy policy is publicly accessible
 
----
+
 
 ## Privacy Policy URL
 
@@ -190,7 +183,7 @@ https://github.com/[your-repo]/energynow-extension/blob/main/PRIVACY.md
 
 *(Update with actual GitHub URL or host PRIVACY.md on energynow.in)*
 
----
+
 
 ## Support Contact
 
