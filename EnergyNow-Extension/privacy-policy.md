@@ -1,197 +1,160 @@
-# Chrome Web Store Privacy Policy
+# Privacy Policy – EnergyNow Bridge Chrome Extension
 
-## Single Purpose Description
+*Last updated: October 4, 2025*
 
-**One-sentence summary:**
-WhatsApp integration for energy business operations, enabling authorized users to send business messages for alerts, approvals, and customer communications through the EnergyNow management platform.
+EnergyNow (“we,” “our,” or “us”) is committed to protecting the privacy of users of the **EnergyNow Bridge Chrome Extension** (the “Extension”). This Privacy Policy explains what data we collect, how we use it, and the rights you have as a user.
 
-**Detailed description (for store listing):**
-EnergyNow Bridge integrates WhatsApp Web with the EnergyNow business management platform. It enables authorized business users to send WhatsApp messages for energy transaction alerts, inventory management, overhead tracking, and operational approvals. The extension provides a message queue system for bulk messaging campaigns and real-time notifications for business events.
-
-
-
-## Permission Justifications
-
-### activeTab
-Required to detect when WhatsApp Web is open and verify connection status without accessing all browser tabs.
-
-### storage
-Stores JWT authentication tokens, user session data, message queues, campaign templates, and extension settings locally.
-
-### background
-Maintains persistent service worker for connection monitoring, message queue processing, and coordinating message delivery.
-
-### scripting
-Injects content scripts into WhatsApp Web to access messaging APIs and enable programmatic message sending.
-
-### tabs
-Detects WhatsApp Web tabs, opens WhatsApp Web when needed, and sends messages to the correct tab.
-
-### alarms
-Schedules periodic tasks: connection checks, queue processing, message retries, and token refresh.
-
-### Host: web.whatsapp.com
-**CORE FUNCTIONALITY** - Required to inject scripts and access WhatsApp's messaging APIs for sending business messages.
-
-### Host: api.energynow.in
-Communicates with EnergyNow backend to fetch business data (alerts, approvals, transactions, overhead tasks).
-
-### Host: energynow.in
-User authentication, OAuth callbacks, and session management.
-
-### Host: ipapi.co
-One-time country detection to auto-select country code for phone number formatting (UX improvement only).
-
-
-
-## Remote Code
-
-**Does your extension execute remote code?** NO
-
-**Justification:** All code is bundled with the extension package. Only JSON data is fetched from APIs, never executable JavaScript. Content Security Policy prevents remote code execution.
-
-
-
-## Data Usage Certification
-
-### Personally Identifiable Information (PII)
-**Collected:** YES
-- User email (for login)
-- User name and role (from EnergyNow account)
-- Organization code (company ID)
-- WhatsApp phone number (auto-detected from WhatsApp Web)
-
-**Use:** Authentication, authorization, display in UI, verify authorized messaging accounts
-**Shared with:** EnergyNow API only (first-party service)
-**Transmission:** HTTPS only
-**Storage:** Chrome storage API (encrypted)
-
-
-
-### Health Information
-**Collected:** NO
-
-
-### Financial and Payment Information
-**Collected:** NO
-
-**Note:** Extension displays read-only transaction records for approval workflows but does NOT collect payment details, process transactions, or handle financial data.
-
-
-
-### Authentication Information
-**Collected:** YES
-- JWT tokens (from EnergyNow API)
-- Session timestamps
-
-**Use:** API authentication
-**Security:** Stored encrypted in Chrome storage, transmitted via HTTPS only, auto-expire
-**Shared with:** EnergyNow API only
-
-
-
-### Personal Communications
-**Collected:** YES
-- Outbound message content (user-typed business messages)
-- Recipient phone numbers (customers, vendors)
-- Campaign templates
-
-**Use:** Sending business communications via WhatsApp Web
-**Important:** Extension does NOT access:
-- Incoming WhatsApp messages
-- Personal conversations
-- Chat history
-- Contact lists (except numbers explicitly entered)
-
-**Transmission:** Through WhatsApp's infrastructure (subject to WhatsApp's privacy policy)
-**Retention:** Stored locally until delivery, then optionally cleared
-
-
-
-### Location
-**Collected:** NO
-
-**Note:** Uses ipapi.co once to detect country code (e.g., "IN") for phone formatting UX. Does NOT track GPS, precise location, or IP addresses.
-
-
-### Web History
-**Collected:** NO
-
-Extension only detects if web.whatsapp.com is open. Does not monitor, track, or access other websites, URLs, bookmarks, or browsing history.
-
-
-
-### User Activity
-**Collected:** YES (local only)
-- Message sending statistics (count, status)
-- Extension usage (which tabs viewed)
-- Queue status (pending, sent, failed)
-
-**Use:** Display stats in UI, retry failed messages, show activity logs
-**Storage:** Local only (Chrome storage)
-**Analytics:** NO analytics services used
-**Sharing:** NOT transmitted to any server
-
-
-
-### Website Content
-**Accessed:** YES
-- WhatsApp Web page (to inject messaging scripts)
-- EnergyNow API responses (business data)
-
-**Not Accessed:**
-- WhatsApp chat history
-- Received messages
-- Media files
-- Other websites
-
-**Modifications:** Scripts injected into web.whatsapp.com only for messaging functionality
-
-
-## Data Handling Practices Summary
-
-| Data Type | Collected | Use | Encrypted | Shared | Retention |
-|-----------|-----------|-----|-----------|--------|-----------|
-| Email/Name | Yes | Authentication | Yes | EnergyNow API only | Until logout |
-| WhatsApp # | Yes | Authorization check | Yes | EnergyNow API only | Until logout |
-| Message content | Yes | Send via WhatsApp | Yes | WhatsApp only | Until delivered |
-| Auth tokens | Yes | API access | Yes | EnergyNow API only | 24 hours |
-| Health info | No | - | - | - | - |
-| Financial info | No | - | - | - | - |
-| Location | No | - | - | - | - |
-| Web history | No | - | - | - | - |
-
-
-
-## Certification Statements
-
-✅ This extension complies with Chrome Web Store policies
-✅ This extension complies with Google's Limited Use requirements
-✅ Data use is limited to providing core functionality
-✅ No data is sold to third parties
-✅ No data is used for advertising or profiling
-✅ All data transfers are encrypted (HTTPS)
-✅ Users can delete data via logout/uninstall
-✅ Privacy policy is publicly accessible
-
-
-
-## Privacy Policy URL
-
-**For Chrome Web Store listing:**
-https://github.com/[your-repo]/energynow-extension/blob/main/PRIVACY.md
-
-*(Update with actual GitHub URL or host PRIVACY.md on energynow.in)*
-
-
-
-## Support Contact
-
-**Email:** support@energynow.in
-**Website:** https://energynow.in
+By installing and using the Extension, you agree to the terms outlined in this Privacy Policy.
 
 ---
 
-**Prepared for:** Chrome Web Store Submission
-**Extension Version:** 1.0.0
-**Date:** October 4, 2025
+## 1. Purpose of the Extension
+
+The Extension integrates **WhatsApp Web** with the **EnergyNow business management platform**. It allows authorized business users to:
+
+* Send WhatsApp messages for transaction alerts, inventory updates, and approvals.
+* Manage message queues for bulk or campaign-based communication.
+* Receive real-time notifications related to business operations.
+
+The Extension does **not** access personal WhatsApp messages, media files, or unrelated browsing activity.
+
+---
+
+## 2. Data We Collect
+
+### Personally Identifiable Information (PII)
+
+* **Email, Name, Role** – collected from your EnergyNow account for authentication and display.
+* **Organization Code** – used to verify your company identity.
+* **WhatsApp Phone Number** – detected from WhatsApp Web to authorize business messaging.
+
+### Authentication Information
+
+* **JWT Tokens & Session Data** – required to authenticate with EnergyNow APIs.
+* Tokens are encrypted, stored locally, and automatically expire.
+
+### Messaging Data
+
+* **Outbound Message Content** – user-typed messages, recipient numbers, and campaign templates.
+* Used exclusively to send business communications via WhatsApp.
+* Incoming messages, contacts, and chat history are **not collected**.
+
+### Extension Activity
+
+* **Message Logs & Status** – includes sent, pending, and failed message counts.
+* Stored locally to enable retries and provide user visibility.
+
+### Location & Device
+
+* **One-time Country Code Detection** – via ipapi.co, to auto-format phone numbers.
+* No precise location, GPS, or IP tracking is performed.
+
+---
+
+## 3. Data We Do Not Collect
+
+* **Health Information** – not collected.
+* **Financial or Payment Information** – not collected.
+* **Browsing History** – not collected, aside from detecting if WhatsApp Web is open.
+* **Incoming WhatsApp Messages, Media, or Contacts** – never accessed.
+
+---
+
+## 4. How We Use Data
+
+We use collected data only to:
+
+* Authenticate users and authorize messaging.
+* Deliver business messages through WhatsApp.
+* Provide transaction alerts, approval workflows, and operational notifications.
+* Improve usability (e.g., country code detection, retrying failed messages).
+
+We do **not**:
+
+* Sell or share data with third parties.
+* Use data for advertising, profiling, or analytics.
+
+---
+
+## 5. Data Sharing
+
+* **EnergyNow API** – receives authentication details, organization code, and limited business metadata.
+* **WhatsApp Infrastructure** – used to deliver outbound messages entered by the user.
+* No other third parties receive data.
+
+All data transfers are encrypted using **HTTPS**.
+
+---
+
+## 6. Data Retention
+
+* **Auth Tokens** – valid for 24 hours and refreshed automatically.
+* **Message Content** – retained locally until delivery; cleared after successful send or logout.
+* **User Info (Email, Role, WhatsApp #)** – retained only during an active session.
+* Users may delete all data at any time by logging out or uninstalling the Extension.
+
+---
+
+## 7. Permissions Justification
+
+The Extension requests the following Chrome permissions strictly for core functionality:
+
+* **activeTab / tabs** – to detect WhatsApp Web and manage messaging tabs.
+* **storage** – to securely store tokens, message queues, and settings.
+* **background / alarms** – to process message queues, retries, and session refresh.
+* **scripting** – to inject scripts into WhatsApp Web for programmatic messaging.
+* **Host permissions** – limited to:
+
+  * `web.whatsapp.com` (messaging integration)
+  * `api.energynow.in` (business data & alerts)
+  * `energynow.in` (authentication & session management)
+  * `ipapi.co` (one-time country detection)
+
+---
+
+## 8. Security Measures
+
+* All communication is encrypted using HTTPS.
+* Authentication tokens are encrypted and expire automatically.
+* No remote code is executed; only bundled extension code runs.
+* Users control their data and may clear it anytime by uninstalling the Extension.
+
+---
+
+## 9. User Rights
+
+As a user, you have the right to:
+
+* Access the data you provide through the Extension.
+* Request deletion of data by logging out or uninstalling.
+* Refuse to provide optional information (e.g., country code detection).
+
+---
+
+## 10. Compliance
+
+This Extension complies with:
+
+* **Chrome Web Store policies**
+* **Google’s Limited Use requirements**
+
+We certify that data is used solely for providing the stated business functionality.
+
+---
+
+## 11. Contact Information
+
+If you have questions or concerns about this Privacy Policy, please contact:
+
+**Support Email:** [support@energynow.in](mailto:support@energynow.in)
+**Website:** [https://energynow.in](https://energynow.in)
+
+---
+
+## 12. Policy Updates
+
+We may update this Privacy Policy from time to time. Updates will be posted on our website and the Chrome Web Store listing. Continued use of the Extension constitutes acceptance of the updated policy.
+
+---
+
+**Prepared for Chrome Web Store Submission – Extension Version 1.0.0**
