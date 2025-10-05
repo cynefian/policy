@@ -54,7 +54,7 @@ Cynefian is committed to:
 * Example:
 
   ```
-  https://github.com/cynefian/legal-policies/blob/main/privacy/PRIVACY_PRODUCTNAME.md  
+  https://github.com/cynefian/policy/blob/main/<application>/privacy-policy.md
   ```
 
 ---
