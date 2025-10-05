@@ -2,7 +2,7 @@
 
 *Last updated: October 4, 2025*
 
-EnergyNow (“we,” “our,” or “us”) is committed to protecting the privacy of users of the **EnergyNow Bridge Chrome Extension** (the “Extension”). This Privacy Policy explains what data we collect, how we use it, and the rights you have as a user.
+Cynefian (“we,” “our,” or “us”) is committed to protecting the privacy of users of the **EnergyNow Bridge Chrome Extension** (the “Extension”). This Privacy Policy explains what data we collect, how we use it, and the rights you have as a user.
 
 By installing and using the Extension, you agree to the terms outlined in this Privacy Policy.
 
